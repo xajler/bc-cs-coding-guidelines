@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Beautiful Code - C# Coding Guideliness by Kornelije Sajler</title>
+
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="Hakim El Hattab">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/serif.css" id="theme">
+         <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <section>
+                        <h1>C# Coding Guideliness</h1>
+                        <h3>Kornelije Sajler</h3>
+                        <p>
+                            <small><a href="http://qualtrak.com">Qualtrak Solution Ltd.</a> {<em>LSD</em>} / <a href="http://uxpassion.com">UXPassion</a> {<em>SD</em>}</small>
+                        </p>
+                    </section>
+                    <section>
+                        <h1>Beautiful Code</h1>
+                    </section>                  
+                </section>
+                <section>
+                    <ul>
+                        <li>xajler (at) gmail {e-mail}</a></li>
+                        <li><a href="http://learnaholic.me">learn-a-holic</a> {blog}</li>
+                        <li><a href="https://github.com/xajler"> xajler</a> {github}</li>
+                        <li><a href="https://twitter.com/xajler">@xajler</a> {twitter}</li>
+                        <li>xajler {skype}</li>
+                        <li><a href="http://metaintellect.com">metaintellect</a> {imaginary firm}</li>
+                        <li><a href="http://www.flickr.com/photos/23706006@N03/sets">flickr</a> {photo galleries | Nikon D7100}</li>
+                        <li><a href="http://www.endomondo.com/profile/9707568">endomondo</a> {biking | hiking | running}</li>
+                        <li><a href="https://www.facebook.com/photo.php?fbid=301978459940914&set=a.281694438635983.1073741928.100003862879029&type=1&theater">guitarist</a> {Jackson | Kramer | kPlus Guitar | Ibanez}</li>
+                    </ul>
+                </section>
+
+                    <section> 
+                        <img src="img/uxpassion.jpg" border="0" />                                  
+                    </section>                
+
+                <section>
+                    <p>Any fool can write code that a computer can understand. Good programmers write code that humans can understand.</p>
+                    <p>&nbsp;</p>
+                    <em><small>Martin Fowler - Refactoring: Improving the Design of Existing Code, 1999</small></em>
+                </section>
+
+                <section>
+                    <p>The only true value of any code is its <strong>readability</strong>! <br/> 
+                    Discipline of writing <strong>consistent</strong> and <strong>readable</strong> code is the best virtue developer/team can have.</p>
+                    <p>&nbsp;</p>
+                    <em><small>Kornelije Sajler</small></em>
+                </section>
+
+                <section>
+                    <h2>Code</h2>
+                    <ul>
+                        <li>Consistent</li>
+                        <li>Readable</li>
+                        <li>Formated</li>
+                        <li>!Misleading</li>
+                        <li>!Out of date</li>
+                    </ul>                   
+                </section>
+
+                <section>
+                    <p>
+                        <strong>Roy</strong>: <em>[singing]</em> We don't need no education.  <br/>
+                        <strong>Moss</strong>: Yes you do. You've just used a <strong><em>double negative</em></strong>.
+                    </p>
+                    <p>&nbsp;</p>
+                    <p><small>The IT Crowd, <a href="http://www.youtube.com/watch?v=63NCvjX7X8E">The Red Door [1.4]</a></small></p>
+                </section>
+
+                
+                <section>
+
+                    <section><h1>General <br/> Coding <br/> Best Practices</h1></section>               
+
+                    <section>
+                        <p>Stick to Don't Repeat Yourself (<em>DRY</em>) and minimize the duplication of code and refactor it afterwards.</p>
+                        <p>&nbsp;</p>
+                        <ul style="font-size: 70%">
+                            <li>Copy/Paste is evil (but necessary).</li>
+                            <li>Double maintenence, prone to bugs.</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <p>Keep code clean of all commented code, especially if it is a left-over.</p>  
+                        <img src="img/01.png" border="0" />                                 
+                    </section>
+
+
+                    <section>
+                        <p>Avoid commenting code inline, better write test with meaningful test name.</p>
+                        <p>&nbsp;</p>
+                        <hr/>
+                        <p>&nbsp;</p>
+                        <p>When you feel the need to write a comment, first try to refactor the code so that any comment becomes superfluous.</p>
+                        <p>&nbsp;</p>
+                        <em><small>Martin Fowler - Refactoring: Improving the Design of Existing Code, 1999</small></em>
+                    </section>
+
+
+                    <section>
+                        <h2>Importance of Naming</h2>
+                        <p>&nbsp;</p>
+                        <p>Try to give meaningful names to classes, methods and variables no matter how long it will be.</p>
+                        <br/>
+                        <p>Especially give meaningful names for all publicly available interfaces (e.g. <em>REST API</em>).</p>
+                    </section>
+
+                    <section>
+                        <h2>Class & Method LOC</h2>
+                        <p>&nbsp;</p>
+                        <p>Try to write methods below 10 LOC and avoid write methods longer than 40 LOC. <br/>Especially if it contains lots of conditional statements, better refactor it to more properly named methods.</p>
+                        <br/>
+                        <p>Try to write classes below 100 LOC.</p>
+                    </section>
+
+                    <section>
+                        <h2>Characters per LOC</h2>
+                        <p>&nbsp;</p>
+                        <p>80 character per LOC is standard - punch cards, 80x24 Teriminal</p>
+                        <p>80 - 120 is good</p>
+                    </section>
+                </section>
+
+
+                <section>
+                    <section><h1>C# Coding Best Practices</h1></section>
+                    <section>
+                        <p>Always clear all comments when work is done no matter if it is yours or not.</p>
+                        <p>&nbsp;</p>
+                        <p>Always remove unused classes, methods and fields when work is done.</p>
+                    </section>
+                    <section data-markdown="00.md" data-separator="^\n\n\n" data-vertical="^\n\n" data-notes="^Note:" data-charset="iso-8859-15"></section>
+                    <section>
+                        <p>Über WTF Code?!</p>  
+                        <img src="img/uber-wtf-code.png" border="0" />                                  
+                    </section>                  
+                    <section data-markdown="01.md" data-separator="^\n\n\n" data-vertical="^\n\n" data-notes="^Note:" data-charset="iso-8859-15"></section>
+                    <section data-markdown="02.md" data-separator="^\n\n\n" data-vertical="^\n\n" data-notes="^Note:" data-charset="iso-8859-15"></section>
+                    <section data-markdown="03.md" data-separator="^\n\n\n" data-vertical="^\n\n" data-notes="^Note:" data-charset="iso-8859-15"></section>
+                    <section data-markdown="04.md" data-separator="^\n\n\n" data-vertical="^\n\n" data-notes="^Note:" data-charset="iso-8859-15"></section>
+                    <section data-markdown="05.md" data-separator="^\n\n\n" data-vertical="^\n\n" data-notes="^Note:" data-charset="iso-8859-15"></section>
+                    <section>
+                        <p>Do not use <code>#Region</code> for hiding the code. <br/>Better is to refactor to method or move the code to the end of the class (Fields & Properties).
+                        </p>
+                        <p>&nbsp;</p>
+                        <p><small>Or use VS keys [<code>Ctrl+A</code> [<code>Ctrl+M, Ctrl+M</code>]] that will collapse whole document.</small></p>
+                        <img src="img/02.png" border="0" /> 
+                    </section>
+                    <section>Preferably use <code>this</code> keyword for all members within a current <code>Class</code> and those from inherited <code>Class</code>(es).
+                    <p>&nbsp;</p>
+                    <p>All private fields should start with underscore as:</p>
+                    <pre><code data-trim contenteditable>private bool _isGood </code></pre>             
+                    </section>
+                    <section>
+                        <h2>Interface vs. Inheritance</h2>
+                        <p>&nbsp;</p>
+                        <p>Use Interfaces for mostly everything, or use <code>Abstract Classes</code> when appropriate.</p>
+                        <p>Avoid inheritance from normal <code>Class</code>, inherit from <code>Abstract Class</code>.</p>
+                        <p>Avoid deeply nested inheritance, the one level of inheritance should be preferable.</p>
+                    </section>
+                    <section>
+                        <p>Use Dependency Injection (<code>DI</code>) / Inversion of Control (<code>IoC</code>) in all cases and avoid <code>new</code> keyword for creating the <code>Object</code>(s).</p>
+                        <p>&nbsp;</p>
+                        <p>Prefer constructor injection.</p>
+                        <p>&nbsp;</p>
+                        <p>Make injected parameters as read-only fields.</p>
+                        <p>&nbsp;</p>
+                        <p>Everything that is instantiated in constructor (and needed elsewhere) make as read-only fields.</p>
+                    </section> 
+                    <section data-markdown="06.md" data-separator="^\n\n\n" data-vertical="^\n\n" data-notes="^Note:" data-charset="iso-8859-15"></section>                 
+                    <section data-markdown="07.md" data-separator="^\n\n\n" data-vertical="^\n\n" data-notes="^Note:" data-charset="iso-8859-15"></section>                 
+                    <section data-markdown="08.md" data-separator="^\n\n\n" data-vertical="^\n\n" data-notes="^Note:" data-charset="iso-8859-15"></section>                 
+                    <section data-markdown="09.md" data-separator="^\n\n\n" data-vertical="^\n\n" data-notes="^Note:" data-charset="iso-8859-15"></section>                 
+                    <section data-markdown="10.md" data-separator="^\n\n\n" data-vertical="^\n\n" data-notes="^Note:" data-charset="iso-8859-15"></section>                 
+                    <section data-markdown="11.md"  data-notes="^Note:" data-charset="iso-8859-15"></section>     
+                    <section data-markdown="12.md" data-separator="^\n\n\n" data-vertical="^\n\n" data-notes="^Note:" data-charset="iso-8859-15"></section>             
+                    <section data-markdown="13.md" data-separator="^\n\n\n" data-vertical="^\n\n" data-notes="^Note:" data-charset="iso-8859-15"></section>             
+                    <section data-markdown="14.md" data-separator="^\n\n\n" data-vertical="^\n\n" data-notes="^Note:" data-charset="iso-8859-15"></section>             
+                    <section data-markdown="15.md" data-separator="^\n\n\n" data-vertical="^\n\n" data-notes="^Note:" data-charset="iso-8859-15"></section>             
+                    <section data-markdown="16.md"  data-charset="iso-8859-15"></section>             
+                </section>
+
+                <section>                    
+                    <section><h1>Tools</h1></section>
+                    <section>
+                        <h1>R#</h1>
+                        <p>&nbsp;</p>
+                        <p>Great tool, for easier coding, completion and conventions.</p>
+                        <p>&nbsp;</p>
+                        <p>Power vs. Responsibility</p>
+                    </section>
+                    <section>
+                        <h1>StyleCop</h1>
+                        <p>&nbsp;</p>
+                        <p>Great tool, coding conventions on steroids.</p>
+                        <p>Created by Microsoft employee, but it is not Microsoft product.</p>
+                        <p>&nbsp;</p>
+                        <p>Can be annoying, there are really, really lots of conventions.</p>
+                    </section>                    
+                </section>
+
+                <section>
+                    <h1>Demo</h1>
+                </section>            
+
+                <section>
+                    <h2>TO BE CONTINUED...</h2>
+                    <small>...if you want!</small>
+                    <p>&nbsp;</p>
+                    <p>Naming Patterns/Conventions</p>
+                    <p>&nbsp;</p>
+                    <p>Project Patterns</p>
+                    <p>&nbsp;</p>
+                    <p>Project Architecture</p>
+                </section>
+
+                <section>
+                    <h1>THE END</h1>
+                    <h3>by Kornelije Sajler (xajler)</h3>
+                </section>
+
+            </div>
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+
+    </body>
+</html>
